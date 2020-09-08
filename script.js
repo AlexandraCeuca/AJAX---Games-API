@@ -60,6 +60,7 @@ function displayError(error) {
     retryButton.innerHTML = "Feeling lucky";
     retryButton.addEventListener("click", function () {getGames("games")});
     errorDiv.appendChild(retryButton);
+    errorDiv.style.display = "block";
   }
 
 function displayLoader() {
@@ -77,6 +78,6 @@ function hideLoader() {
 }
 function hideErrorMessage() {
     let errorDiv = document.getElementById("errorDiv");
-    errorDiv.style.visibility = "hidden";
+    errorDiv.style.display = "none";
 }
   
