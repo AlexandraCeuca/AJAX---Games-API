@@ -5,7 +5,9 @@ getGames("/fdsfsdfds");
 
 function getGames(endpoint) {
 
+hideErrorMessage(); 
 displayLoader();
+
 
 fetch(baseUrl.href+endpoint, { method: "GET" })
     .then(function (response) {
@@ -72,5 +74,9 @@ function hideLoader() {
     var flexContainer = document.getElementsByClassName("flex-container")[0];
     flexContainer.style.opacity = 1;
     loader.style.display = "none";
+}
+function hideErrorMessage() {
+    let errorDiv = document.getElementById("errorDiv");
+    errorDiv.style.visibility = "hidden";
 }
   
